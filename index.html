@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task app</title>
+    <title>Tasks app</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- CSS Custom-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <!-- Navegacion -->
+    <header class="contenedor">
+        <nav class="navegacion">
+            <a href="#">Tasks App</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="contenedor tasks">
+        <div class="formulario">
+            <form id="form-task">
+                <div class="grupo">
+                    <input type="text" id="title" placeholder="Agregue una tarea">
+                </div>
+                <div class="grupo">
+                    <textarea id="description" cols="30" rows="8" placeholder="Agregue una descripción"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primario">Guardar</button>
+            </form>
+        </div>
+        <div class="items" id="tasks"></div>
+    </main>
+
+    <!-- JavaScript Custom -->
+    <script src="js/script.js"></script>
 </body>
 </html>
