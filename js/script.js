@@ -1,4 +1,6 @@
 document.getElementById('form-task').addEventListener('submit', saveTask);
+document.getElementById('night').addEventListener('click', oscuro);
+document.getElementById('day').addEventListener('click', claro);
 
 function saveTask(e){
     e.preventDefault();
@@ -55,6 +57,41 @@ function deleteTasks(title){
     }
     localStorage.setItem('tasks', JSON.stringify(tasks));
     getTasks();
+}
+
+function oscuro(e){
+    e.preventDefault();
+
+    let body = document.body;
+    body.style.backgroundColor = "black";
+    body.style.color = "#f3f3f3";
+
+    let title = document.getElementById('title');
+    title.style.backgroundColor = 'black';
+    title.style.color = '#f3f3f3';
+    let description = document.getElementById('description');
+    description.style.backgroundColor = 'black';
+    description.style.color = '#f3f3f3';
+
+    document.getElementById('night').style.display = 'none';
+    document.getElementById('day').style.display = 'block';
+}
+function claro(e){
+    e.preventDefault();
+
+    let body = document.body;
+    body.style.backgroundColor = "#f3f3f3";
+    body.style.color = "black";
+
+    let title = document.getElementById('title');
+    title.style.backgroundColor = '#f3f3f3';
+    title.style.color = 'black';
+    let description = document.getElementById('description');
+    description.style.backgroundColor = '#f3f3f3';
+    description.style.color = 'black';
+
+    document.getElementById('day').style.display = 'none';
+    document.getElementById('night').style.display = 'block';
 }
 
 getTasks();

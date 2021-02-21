@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasks app</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
@@ -13,10 +15,14 @@
 </head>
 <body>
     <!-- Navegacion -->
-    <header class="contenedor">
+    <header class="contenedor header">
         <nav class="navegacion">
-            <a href="#">Tasks App</a>
+            <a href="/index.html">Tasks App</a>
         </nav>
+        <div>
+            <a href="#" class="btn btn-oscuro" id="night"><i class="fas fa-moon"></i></a>
+            <a href="#" class="btn btn-claro" id="day"><i class="fas fa-sun"></i></a>
+        </div>
     </header>
 
     <!-- Contenido principal -->
@@ -24,10 +30,12 @@
         <div class="formulario">
             <form id="form-task">
                 <div class="grupo">
-                    <input type="text" id="title" placeholder="Agregue una tarea">
+                    <label>Título: </label>
+                    <input type="text" id="title" placeholder="Agregue una tarea" required>
                 </div>
                 <div class="grupo">
-                    <textarea id="description" cols="30" rows="8" placeholder="Agregue una descripción"></textarea>
+                    <label>Descripción: </label>
+                    <textarea id="description" cols="30" rows="8" required placeholder="Agregue una descripción"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primario">Guardar</button>
             </form>
