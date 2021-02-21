@@ -36,8 +36,10 @@ function getTasks(){
 
         tasksView.innerHTML += `<div class="item">
             <div class="contenido-item">
-                <p>${title} - ${description}</p>
-                <a class="btn btn-eliminar" onclick="deleteTasks('${title}')">Eliminar</a>
+                <p><b>Título:</b> ${title} <br><b>Descripción:</b> ${description}</p>
+                <div class="eliminar">
+                    <a class="btn btn-eliminar" onclick="deleteTasks('${title}')">Eliminar</a>
+                </div>
             </div>
         </div>`
     }

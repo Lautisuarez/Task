@@ -57,14 +57,13 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
+    height: 80vh;
 }
 .formulario{
-    height: 80vh;
     border: 1px solid #dc6d02;
     border-radius: 1rem;
-}
-.formulario form{
     padding: 5rem 2rem 0 2rem;
+    height: 50%;
 }
 .grupo{
     margin-bottom: 2rem;
@@ -79,17 +78,22 @@ body{
 .items{
     border: 1px solid #dc6d02;
     border-radius: 1rem;
-    padding: 5rem 2rem 0 2rem;
+    padding: 0 2rem;
 }
 .item{
-    text-align: center;
     margin-bottom: 3rem;
     border-bottom: 1px solid gray;
-    padding: 1.2rem;
+    padding: 2rem;
 }
 .contenido-item p{
     font-size: 2rem;
 }
+.contenido-item p b{
+    font-size: 1.7rem;
+}
 .contenido-item a{
     font-size: 1.5rem;
+}
+.eliminar {
+    text-align: right;
 }
